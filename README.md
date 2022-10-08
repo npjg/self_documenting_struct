@@ -29,6 +29,8 @@ You can unpack and pack with the existing simple data types already provided for
     with open('C:\WINDOWS\BEAR.EXE', 'rb') as bear_file:
         # Since this contains just one element, the tuple is automatically unpacked 
         # by the uint32_le method.
+        #
+        # More readable than struct.unpack_from('<I', bear_file)[0].
         an_integer: int = struct.unpack.uint32_le(bear_file)
 
     with open('C:\WINNT\BUNNY32.DLL', 'wb') as bunny_file:
