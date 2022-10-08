@@ -22,10 +22,6 @@ class ByteOrder:
     big = '>'
     network = '!'
 
-## Specifies the default byte order in case another byte order is 
-## not provided in a format string.
-default_byte_order = ByteOrder.Little
-
 ## Gives more descrptive names to commonly-used size format characters
 ## used for packing/unpacking bytes with the struct module.
 ##
