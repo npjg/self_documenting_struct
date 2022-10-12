@@ -13,34 +13,31 @@ from .data_types import Type
 ## \param[in] stream - A binary stream that supports the read method.
 ## \return The decoded data type.
 def uint8(stream) -> int:
-    return struct.unpack_from(Type.uint8, stream)[0]
+    return struct.unpack(Type.uint8, stream.read(1))[0]
 
 def int8(stream) -> int:
-    return struct.unpack_from(Type.int8, stream)[0]
+    return struct.unpack(Type.int8, stream.read(1))[0]
 
 def uint16_le(stream) -> int:
-    return struct.unpack_from(Type.uint16_le, stream)[0]
+    return struct.unpack(Type.uint16_le, stream.read(2))[0]
 
 def int16_le(stream) -> int:
-    return struct.unpack_from(Type.int16_le, stream)[0]
+    return struct.unpack(Type.int16_le, stream.read(2))[0]
 
 def uint16_be(stream) -> int:
-    return struct.unpack_from(Type.uint16_be, stream)[0]
+    return struct.unpack(Type.uint16_be, stream.read(2))[0]
 
 def int16_be(stream) -> int:
-    return struct.unpack_from(Type.int16_be, stream)[0]
+    return struct.unpack(Type.int16_be, stream.read(2))[0]
 
 def uint32_le(stream) -> int:
-    return struct.unpack_from(Type.uint32_le, stream)[0]
+    return struct.unpack(Type.uint32_le, stream.read(4))[0]
 
 def int32_le(stream) -> int:
-    return struct.unpack_from(Type.int32_le, stream)[0]
+    return struct.unpack(Type.int32_le, stream.read(4))[0]
 
 def uint32_be(stream) -> int:
-    return struct.unpack_from(Type.uint32_be, stream)[0]
+    return struct.unpack(Type.uint32_be, stream.read(4))[0]
 
 def int32_be(stream) -> int:
-    return struct.unpack_from(Type.int32_be, stream)[0]
-
-def c_string(stream) -> bytes:
-    return struct.unpack_from(Type.c_string, stream)[0]
+    return struct.unpack(Type.int32_be, stream.read(4))[0]
