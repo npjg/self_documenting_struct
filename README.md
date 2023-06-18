@@ -1,4 +1,3 @@
-# self_documenting_struct
 Most projects that use the [`struct` library](https://docs.python.org/3/library/struct.html) use raw format strings, which are difficult to understand and remember. This library intuitively wraps the `struct` library to address this issue. provides dataclasses that define the various `struct` format string elements, which can then be combined into format strings in a far more consistent and self-documenting manner than they could otherwise.
 
 I wrote this library to aid my reverse engineering efforts.
