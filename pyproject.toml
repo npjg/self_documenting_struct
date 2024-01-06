@@ -8,7 +8,7 @@ version = "0.9.1"
 description = "Makes the Python struct library more self-documenting."
 readme = "README.md"
 authors = [{ name = "npjg" }]
-license = { file = "LICENSE" }
+license = { file = "COPYING" }
 classifiers = [
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python",
