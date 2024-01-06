@@ -35,13 +35,13 @@ def int16_le(value: int, into = None) -> bytes:
     if into is None:
         return struct.pack(Type.int16_le, value)
     else:
-        struct.pack_into(Type.int16_le, into, into.tell(), value)
+        into.write(struct.pack(Type.int16_le, value))
 
 def uint16_be(value: int, into = None) -> bytes:
     if into is None:
         return struct.pack(Type.uint16_be, value)
     else:
-        struct.pack_into(Type.uint16_be, into, into.tell(), value)
+        into.write(struct.pack(Type.uint16_be, value))
 
 def int16_be(value: int, into = None) -> bytes:
     if into is None:
@@ -53,22 +53,22 @@ def uint32_le(value: int, into = None) -> bytes:
     if into is None:
         return struct.pack(Type.uint32_le, value)
     else:
-        struct.pack_into(Type.uint32_le, into, into.tell(), value)
+        into.write(struct.pack(Type.uint32_le, value))
 
 def int32_le(value: int, into = None) -> bytes:
     if into is None:
         return struct.pack(Type.int32_le, value)
     else:
-        struct.pack_into(Type.int32_le, into, into.tell(), value)
+        into.write(struct.pack(Type.int32_le, value))
 
 def uint32_be(value: int, into = None) -> bytes:
     if into is None:
         return struct.pack(Type.uint32_be, value)
     else:
-        struct.pack_into(Type.uint32_be, into, into.tell(), value)
+        into.write(struct.pack(Type.uint32_be, value))
 
 def int32_be(value: int, into = None) -> bytes:
     if into is None:
         return struct.pack(Type.int32_be, value)
     else:
-        struct.pack_into(Type.int32_be, into, into.tell(), value)
+        into.write(struct.pack(Type.int32_be, value))
