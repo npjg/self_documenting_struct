@@ -1,21 +1,26 @@
 [build-system]
-requires      = ["setuptools>=61.0.0", "wheel"]
+requires = ["setuptools>=64", "wheel", "setuptools_scm>=8"]
 build-backend = "setuptools.build_meta"
 
 [project]
+# We are using setuptools_scm for versioning, so no version number is specified here.
+dynamic = ["version"]
 name = "self_documenting_struct"
-version = "0.9.1"
 description = "Makes the Python struct library more self-documenting."
 readme = "README.md"
 authors = [{ name = "npjg" }]
 license = { file = "COPYING" }
 classifiers = [
-    "License :: OSI Approved :: MIT License",
-    "Programming Language :: Python",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
 ]
 keywords = ["struct", "reverse-engineering", "self-document"]
 requires-python = ">=3.9"
 
+[tool.setuptools_scm]
+# Empty since no extra settings are needed, presence enables setuptools_scm.
+
 [project.urls]
 Homepage = "https://github.com/npjg/self_documenting_struct"
+Repository = "https://github.com/npjg/self_documenting_struct"
